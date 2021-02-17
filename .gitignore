@@ -72,3 +72,6 @@ crashlytics-build.properties
 
 # Demo recordings Large video files
 /[Rr]ecordings/*
+
+# Mac auto-gen files
+**/*.DS_Store
