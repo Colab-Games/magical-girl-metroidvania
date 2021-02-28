@@ -5,10 +5,11 @@ using UnityEngine;
 public class CharacterController2D : MonoBehaviour
 {
     [Header("Movement Properties")]
-    public float speed = 1f;
+    public float speed = 2f;
     public float jumpVelocity = 10f;
     public float airHorizontalInertia = 5f;
     public float wallJumpVelocity = 5f;
+    
 
     [Header("Physics Check")]
     public float groundDistance = 0.1f;
@@ -18,6 +19,7 @@ public class CharacterController2D : MonoBehaviour
 
     Rigidbody2D _rb;
     BoxCollider2D _bc;
+    Animator _anim;
     int _collisionLayerMask;
 
     bool _jumpPressed = false;
@@ -35,6 +37,7 @@ public class CharacterController2D : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _bc = GetComponent<BoxCollider2D>();
+        _anim = GetComponent<Animator>();
 
         _collisionLayerMask = Physics2D.GetLayerCollisionMask(gameObject.layer);
 
@@ -44,8 +47,9 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump")) {
             _jumpPressed = true;
+        }
     }
 
     void FixedUpdate()
@@ -56,6 +60,28 @@ public class CharacterController2D : MonoBehaviour
         float xVelocity = horizontal * speed;
 
         float yVelocity = _rb.velocity.y;
+
+        // Animation
+        bool isMoving = xVelocity != 0;
+        if (!isMoving) {
+            _anim.SetBool("isRunning", false);
+        } else {
+            _anim.SetBool("isRunning", true);
+        }
+
+        bool isFalling = yVelocity < -0.2;
+        if (isFalling) {
+            _anim.SetBool("isFalling", true);
+        } else {
+            _anim.SetBool("isFalling", false);
+        }
+
+        bool isJumping = yVelocity > 0.7 && !_isGrounded;
+        if (isJumping) {
+            _anim.SetBool("isJumping", true);
+        } else {
+            _anim.SetBool("isJumping", false);
+        }
 
         // Wall grab
         bool canGrab = yVelocity <= 0f && !_isGrounded && _isTouchingWallFront;
@@ -68,14 +94,20 @@ public class CharacterController2D : MonoBehaviour
         // Air horizontal movement
         if (!_isGrounded) {
             float keptVelocity = _rb.velocity.x;
-            if (Mathf.Abs(keptVelocity) > 0 || Mathf.Abs(xVelocity) > 0)
+            
+            if (Mathf.Abs(keptVelocity) > 0 || Mathf.Abs(xVelocity) > 0) {
                 xVelocity = Mathf.Clamp(keptVelocity + ((xVelocity - _direction) / airHorizontalInertia), -speed, speed);
+            }
+        } else {
+            _anim.SetBool("isFalling", false);
         }
 
         // Jump
         bool canJump = _isGrounded;
         if (_jumpPressed && canJump) {
             yVelocity += jumpVelocity;
+        } else if (!_jumpPressed && _isGrounded){
+            _anim.SetBool("isJumping", false);
         }
 
 
