@@ -261,6 +261,17 @@
                 },
                 {
                     "name": "",
+                    "id": "43ef2120-b995-4007-a793-35a313c29bd0",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "97835b00-9d17-4834-a1f3-453cafc65219",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -283,22 +294,11 @@
                 },
                 {
                     "name": "",
-                    "id": "43ef2120-b995-4007-a793-35a313c29bd0",
-                    "path": "<XInputController>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d3371fae-cfa4-4615-ab3f-9a336069ae69",
                     "path": "<DualShockGamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false

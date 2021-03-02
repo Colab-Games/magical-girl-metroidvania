@@ -40,8 +40,13 @@ public class PlayerMovement : CharacterController2D
     }
     public void Move(InputAction.CallbackContext context) 
     {
-        // Set character velocity and trigger animation
-        _horizontal = context.ReadValue<Vector2>().x;
+        if (context.started || context.performed) {
+            _horizontal = context.ReadValue<Vector2>().x;
+        }
+
+        if (context.canceled) {
+            _horizontal = 0;
+        }
     }
     public void Jump(InputAction.CallbackContext context) 
     {
