@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 9a2318896b73143f1936b8660eb61eb9
+guid: cf2672b02388b4634be44342abd56771
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5711482858717791323
-    second: girl-cyber-player-jump_0
+      213: 7025252327426032271
+    second: girl-cyber-player-jump 1_0
   - first:
-      213: -2201066084042394822
-    second: girl-cyber-player-jump_1
+      213: -8100341884965731074
+    second: girl-cyber-player-jump 1_1
   - first:
-      213: -8426518444309118142
-    second: girl-cyber-player-jump_2
+      213: -2936232788987890291
+    second: girl-cyber-player-jump 1_2
   - first:
-      213: 4555837961119164655
-    second: girl-cyber-player-jump_3
+      213: -7148896777695404401
+    second: girl-cyber-player-jump 1_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: girl-cyber-player-jump_0
+      name: girl-cyber-player-jump 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -129,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5abb469c99cbcb0b0800000000000000
-      internalID: -5711482858717791323
+      spriteID: f8207b935c5be7160800000000000000
+      internalID: 7025252327426032271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-cyber-player-jump_1
+      name: girl-cyber-player-jump 1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a333e7dee0e3471e0800000000000000
-      internalID: -2201066084042394822
+      spriteID: ef4466b19fdc59f80800000000000000
+      internalID: -8100341884965731074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-cyber-player-jump_2
+      name: girl-cyber-player-jump 1_2
       rect:
         serializedVersion: 2
         x: 64
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2438da9de1efe0b80800000000000000
-      internalID: -8426518444309118142
+      spriteID: d85b582d5d76047d0800000000000000
+      internalID: -2936232788987890291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl-cyber-player-jump_3
+      name: girl-cyber-player-jump 1_3
       rect:
         serializedVersion: 2
         x: 96
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe86fbedc76993f30800000000000000
-      internalID: 4555837961119164655
+      spriteID: f8ed785d1440acc90800000000000000
+      internalID: -7148896777695404401
       vertices: []
       indices: 
       edges: []

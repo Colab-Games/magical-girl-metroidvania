@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3f87305554aa34713acd5f443b5fcd7d
+guid: 5e11db93677f44dccb987daa38fa54ab
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -20,6 +20,12 @@ TextureImporter:
   - first:
       213: 9221975621002347387
     second: girl-cyber-player-run_5
+  - first:
+      213: -2298760655540471408
+    second: girl-cyber-player-run_6
+  - first:
+      213: -6159173587814738073
+    second: girl-cyber-player-run_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -242,6 +248,48 @@ TextureImporter:
       bones: []
       spriteID: b73482997f90bff70800000000000000
       internalID: 9221975621002347387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girl-cyber-player-run_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099bdd6fc592910e0800000000000000
+      internalID: -2298760655540471408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girl-cyber-player-run_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767955c2148368aa0800000000000000
+      internalID: -6159173587814738073
       vertices: []
       indices: 
       edges: []
